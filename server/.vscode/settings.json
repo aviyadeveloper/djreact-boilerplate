@@ -1,13 +1,15 @@
 {
   "editor.formatOnSave": true,
+  "editor.defaultFormatter": "ms-python.python",
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "workbench.colorCustomizations": {
     "activityBar.background": "#170080",
   },
-  "python.pythonPath": "server/env/bin/python3",
+  "python.pythonPath": "env/bin/python",
+  "python.formatting.provider": "autopep8",
   "python.linting.pycodestyleEnabled": false,
-  "python.linting.pylintPath": "server/env/bin/pylint",
+  "python.linting.pylintPath": "env/bin/pylint",
   "python.linting.pylintArgs": [
     "--load-plugins",
     "pylint_django"

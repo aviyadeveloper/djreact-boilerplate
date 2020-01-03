@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Route, RouteProps } from "react-router-dom";
-import Header from "../components/sections/Header";
+import Header from "../components/layout/Header";
 
 const PublicRoute: React.FC<RouteProps> = (props: RouteProps): ReactElement => (
   <div>

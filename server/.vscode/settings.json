@@ -1,13 +1,18 @@
 {
-  "team.showWelcomeMessage": true,
   "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#170080",
+  },
   "python.pythonPath": "server/env/bin/python3",
   "python.linting.pycodestyleEnabled": false,
   "python.linting.pylintPath": "server/env/bin/pylint",
-  "python.linting.pylintArgs": ["--load-plugins", "pylint_django"],
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django"
+  ],
   "python.linting.pylintEnabled": true,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
   "python.linting.enabled": true,
-  "python.venvPath": "${worskapce}/server/env/bin/python3"
+  "python.venvPath": "${worskapce}/server/env/bin/python3",
 }

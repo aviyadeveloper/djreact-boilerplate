@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => (
   <nav className="navbar">
-    <Link to="/index">Index</Link>
+    <Link to="/">Index</Link>
     <Link to="/articles">Articles</Link>
   </nav>
 );

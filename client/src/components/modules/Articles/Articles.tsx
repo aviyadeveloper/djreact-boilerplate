@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ArticlesList from "./ArticlesList";
 import { getArticlesList } from "../../../actions/ArticlesActions";
-import { Article } from "../../../types/Articles";
+import { ArticleShort } from "../../../types/Articles";
 
 const Articles: React.FC = () => {
-  const [articles, setArticles] = useState<Article[]>([]);
+  const [articles, setArticles] = useState<ArticleShort[]>([]);
 
   useEffect(() => {
-    getArticlesList().then((data: Article[]) => {
+    getArticlesList().then((data: ArticleShort[]) => {
       setArticles([...data]);
     });
   }, []);

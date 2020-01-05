@@ -3,7 +3,6 @@ import Navbar from "../layout/Navbar";
 
 const Header: React.FC = () => (
   <div className="header">
-    <p>header is here</p>
     <Navbar />
   </div>
 );

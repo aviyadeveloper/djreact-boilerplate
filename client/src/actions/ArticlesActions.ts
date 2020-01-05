@@ -1,11 +1,16 @@
 import axios from "axios";
 import apiPath from "./apiPath";
-console.log(apiPath);
 
 const getArticlesList = () =>
   axios
-    .get(apiPath)
+    .get(`${apiPath}/articles/`)
     .then(res => res.data)
     .catch(error => error);
 
-export { getArticlesList };
+const getArticle = (id: string) =>
+  axios
+    .get(`${apiPath}/articles/${id}`)
+    .then(res => res.data)
+    .catch(error => error);
+
+export { getArticlesList, getArticle };

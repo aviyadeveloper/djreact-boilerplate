@@ -7,7 +7,7 @@ interface ArticleListProps {
 }
 
 const ArticleList: React.FC<ArticleListProps> = props => (
-  <div>
+  <div className="articles__list">
     {props.articles.map(a => (
       <ArticleListItem {...a} key={a.id} />
     ))}

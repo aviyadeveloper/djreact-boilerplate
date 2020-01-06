@@ -14,7 +14,7 @@ const Articles: React.FC = () => {
 
   return (
     <div className="articles">
-      <h1>Articles Module</h1>
+      <h2 className="module-title">Articles Module</h2>
       <ArticlesList articles={articles} />
     </div>
   );

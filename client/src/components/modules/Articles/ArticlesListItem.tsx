@@ -8,9 +8,9 @@ interface ArticleListItemProps {
 }
 
 const ArticleListItem: React.FC<ArticleListItemProps> = props => (
-  <div>
+  <div className="articles__list__item">
     <Link to={path.join(window.location.pathname, `${props.id}`)}>
-      <h4>{props.title}</h4>
+      <h4 className="articles__list__item__title">{props.title}</h4>
     </Link>
   </div>
 );

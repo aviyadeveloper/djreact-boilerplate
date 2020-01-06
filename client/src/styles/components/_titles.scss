@@ -1,0 +1,5 @@
+.module-title {
+  @include text-pri;
+  font-size: $mrg-4;
+  margin: $mrg-2 0;
+}

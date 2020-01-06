@@ -1,5 +1,25 @@
+// External
 @import "../../node_modules/normalize.css/normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
 
+// Settings
+@import "./settings/colors";
+@import "./settings/margins";
+@import "./settings/texts";
+
+// Layout
+@import "./layout/content-container";
+
+// Components
+@import "./components/navbar";
+@import "./components/links";
+@import "./components/titles";
+
+// Modules
+@import "./modules/articles.scss";
+
+// Base
 body {
-  background-color: pink;
+  font-family: "Roboto", "Montserrat", sans-serif;
+  background-color: $color-bg-light;
 }

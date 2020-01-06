@@ -1,0 +1,21 @@
+.navbar {
+  background-color: $color-pri-dark;
+}
+
+.navbar__links-container {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__link {
+  padding: $mrg-3;
+  @include text-pri;
+}
+
+.navbar__link:hover {
+  background-color: $color-pri-light;
+}
+
+.navbar__link.active {
+  color: $color-white;
+}

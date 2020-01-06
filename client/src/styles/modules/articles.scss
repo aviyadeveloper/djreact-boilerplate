@@ -1,0 +1,9 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.articles__list__item {
+  border-bottom: 1px solid $color-grey;
+}

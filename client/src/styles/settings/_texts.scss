@@ -1,0 +1,27 @@
+@mixin text-pri {
+  color: $color-black;
+  font-family: "roboto";
+  font-size: $mrg-3;
+  font-weight: 700;
+}
+
+@mixin text-sec {
+  color: $color-black;
+  font-family: "roboto";
+  font-size: $mrg-2;
+  font-weight: 500;
+}
+
+@mixin text-reg {
+  color: $color-black;
+  font-family: "roboto";
+  font-size: $mrg-2;
+  font-weight: 500;
+}
+
+@mixin text-module-title {
+  color: $color-black;
+  font-family: "roboto";
+  font-size: $mrg-3;
+  font-weight: 700;
+}

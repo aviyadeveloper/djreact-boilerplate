@@ -5,10 +5,17 @@ from ..models import Article
 class ArticleSerializerFull(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('id', 'title', 'content')
+        fields = ('__all__')
 
 
 class ArticleSerializerShort(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('id', 'title')
+        fields = ('id',
+                  'title',
+                  'description',
+                  'uploadDate',
+                  'lastModified',
+                  'publicationDate',
+                  'image'
+                  )

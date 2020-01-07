@@ -1,9 +1,9 @@
-export interface ArticleFull extends ArticleShort {
-  content: string;
-}
-
-export interface ArticleShort {
+export interface Article {
   id: string;
   title: string;
-  summary: string;
+  description: string;
+  content?: string;
+  uploadedDate: Date;
+  publicationDate: any;
+  image: string;
 }

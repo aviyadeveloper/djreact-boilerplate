@@ -1,27 +1,48 @@
+$font-xs: 8px;
+$font-s: 16px;
+$font-m: 24px;
+$font-l: 32px;
+$font-xl: 40px;
+$font-xxl: 48px;
+
 @mixin text-pri {
   color: $color-black;
   font-family: "roboto";
-  font-size: $mrg-3;
+  font-size: $font-xl;
   font-weight: 700;
+  margin: 0;
 }
 
 @mixin text-sec {
   color: $color-black;
   font-family: "roboto";
-  font-size: $mrg-2;
+  font-size: $font-l;
   font-weight: 500;
+  margin: 0;
 }
 
 @mixin text-reg {
   color: $color-black;
   font-family: "roboto";
-  font-size: $mrg-2;
+  font-size: $font-m;
   font-weight: 500;
+  margin: 0;
 }
 
 @mixin text-module-title {
   color: $color-black;
   font-family: "roboto";
-  font-size: $mrg-3;
+  font-size: $font-xxl;
   font-weight: 700;
+  margin: 0;
+}
+
+@mixin text-data-stamp {
+  color: $color-grey;
+  font-family: "roboto";
+  font-size: $font-m;
+  font-weight: 300;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
 }

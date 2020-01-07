@@ -1,5 +1,5 @@
 .navbar {
-  background-color: $color-pri-dark;
+  background-color: $color-pri-light;
 }
 
 .navbar__links-container {
@@ -9,11 +9,11 @@
 
 .navbar__link {
   padding: $mrg-3;
-  @include text-pri;
+  @include text-sec;
 }
 
 .navbar__link:hover {
-  background-color: $color-pri-light;
+  background-color: $color-pri-dark;
 }
 
 .navbar__link.active {

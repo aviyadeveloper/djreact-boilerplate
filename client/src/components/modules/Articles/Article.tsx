@@ -1,27 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { RouteComponentProps } from "react-router-dom";
 import { getArticle } from "../../../actions/ArticlesActions";
-import { ArticleFull } from "../../../types/Articles";
+import { Article } from "../../../types/Articles";
 
 interface ArticleParams {
   id: string;
 }
 
 const ArticleDetail: React.FC<RouteComponentProps<ArticleParams>> = props => {
-  const [article, setArticle] = useState<ArticleFull>();
+  const [article, setArticle] = useState<Article>();
   const id: string = props.match.params.id;
 
   useEffect(() => {
-    getArticle(id).then((res: ArticleFull) => {
+    getArticle(id).then((res: Article) => {
       setArticle(res);
     });
   }, []);
   return (
-    <div>
+    <div className="articles__article__container">
       {article ? (
-        <div>
-          <h2>{article.title}</h2>
-          <p>{article.content}</p>
+        <div className="articles__article">
+          <h2 className="articles__article__title">{article.title}</h2>
+          <div className="articles__article__content">
+            <p>{article.content}</p>
+          </div>
         </div>
       ) : (
         <p>loading...</p>

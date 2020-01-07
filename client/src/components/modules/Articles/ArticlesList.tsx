@@ -1,9 +1,9 @@
 import React from "react";
 import ArticleListItem from "./ArticlesListItem";
-import { ArticleShort } from "../../../types/Articles";
+import { Article } from "../../../types/Articles";
 
 interface ArticleListProps {
-  articles: ArticleShort[];
+  articles: Article[];
 }
 
 const ArticleList: React.FC<ArticleListProps> = props => (

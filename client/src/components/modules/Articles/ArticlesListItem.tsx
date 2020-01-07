@@ -1,18 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import path from "path";
+import { Article } from "../../../types/Articles";
 
-interface ArticleListItemProps {
-  id: string;
-  title: string;
-}
-
-const ArticleListItem: React.FC<ArticleListItemProps> = props => (
-  <div className="articles__list__item">
-    <Link to={path.join(window.location.pathname, `${props.id}`)}>
-      <h4 className="articles__list__item__title">{props.title}</h4>
-    </Link>
-  </div>
+const ArticleListItem: React.FC<Article> = props => (
+  <Link to={path.join(window.location.pathname, `${props.id}`)}>
+    <div className="articles__list__item">
+      <img
+        className="articles__list__item__image"
+        src={props.image}
+        alt={props.title}
+      />
+      <div className="articles__list__item__content">
+        <h4 className="articles__list__item__content__title">{props.title}</h4>
+        <p className="articles__list__item__content__description">
+          {props.description}
+        </p>
+        <p className="articles__list__item__content__publication-date">
+          {props.publicationDate}
+        </p>
+      </div>
+    </div>
+  </Link>
 );
 
 export default ArticleListItem;

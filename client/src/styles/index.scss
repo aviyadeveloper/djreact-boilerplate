@@ -8,6 +8,7 @@
 @import "./settings/texts";
 
 // Layout
+@import "./layout/header-container";
 @import "./layout/content-container";
 
 // Components
@@ -19,7 +20,13 @@
 @import "./modules/articles.scss";
 
 // Base
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Roboto", "Montserrat", sans-serif;
   background-color: $color-bg-light;
+  display: block;
+  font-family: "Roboto", "Montserrat", sans-serif;
+  width: 100vw;
 }

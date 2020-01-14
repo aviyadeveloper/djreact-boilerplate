@@ -9,10 +9,17 @@
   background-color: $color-white;
   margin-bottom: $mrg-4;
   max-height: 256px;
+
+  // mobile
+  @media (max-width: $break-point) {
+    flex-direction: column;
+    max-height: unset;
+  }
 }
 
 .articles__list__item__image {
-  max-height: 256px;
+  height: 256px;
+  width: auto;
 }
 
 .articles__list__item__content {
@@ -21,10 +28,16 @@
   flex-direction: column;
   justify-content: space-between;
   max-height: 256px;
+  @media (max-width: $break-point) {
+    max-height: unset;
+  }
 }
 
 .articles__list__item__content__title {
   @include text-pri;
+  @media (max-width: $break-point) {
+    margin-bottom: 0.5em;
+  }
 }
 
 .articles__list__item__content__description {
@@ -32,6 +45,10 @@
   line-height: 1.25;
   height: 3 * 1.25em;
   overflow: hidden;
+  @media (max-width: $break-point) {
+    margin-bottom: 0.5em;
+    height: fit-content;
+  }
 }
 
 .articles__list__item__content__publication-date {

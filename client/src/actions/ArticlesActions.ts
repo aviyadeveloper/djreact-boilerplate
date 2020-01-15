@@ -13,4 +13,13 @@ const getArticle = (id: string) =>
     .then(res => res.data)
     .catch(error => error);
 
-export { getArticlesList, getArticle };
+const getArticleContent = (link?: string) => {
+  if (link) {
+    return axios
+      .get(`${link}`)
+      .then(res => res.data)
+      .catch(error => error);
+  }
+  return Promise.reject("No link provided");
+};
+export { getArticlesList, getArticle, getArticleContent };

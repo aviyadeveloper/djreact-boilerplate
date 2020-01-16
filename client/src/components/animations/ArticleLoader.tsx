@@ -1,0 +1,81 @@
+import React from "react";
+
+const ArticleLoader: React.FC = () => (
+  <div className="article-loader-container fadeOut">
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 1000 1000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="0"
+        y="71"
+        width="485"
+        height="60"
+        ry="10"
+        className="article-loader-bar-2"
+      ></rect>
+      <rect
+        x="0"
+        y="185"
+        width="757"
+        height="60"
+        ry="10"
+        fill="url('#article-loader-bar-gradient')"
+        className="article-loader-bar-3"
+      ></rect>
+      <rect
+        x="0"
+        y="299"
+        width="687"
+        height="60"
+        ry="10"
+        className="article-loader-bar-4"
+      ></rect>
+      <rect
+        x="0"
+        y="641"
+        width="887"
+        height="60"
+        ry="10"
+        className="article-loader-bar-5"
+      ></rect>
+      <rect
+        x="0"
+        y="755"
+        width="747"
+        height="60"
+        ry="10"
+        className="article-loader-bar-6"
+      ></rect>
+      <rect
+        x="0"
+        y="413"
+        width="827"
+        height="60"
+        ry="10"
+        className="article-loader-bar-7"
+      ></rect>
+      <rect
+        x="0"
+        y="527"
+        width="777"
+        height="60"
+        ry="10"
+        className="article-loader-bar-8"
+      ></rect>
+      <rect
+        x="0"
+        y="869"
+        width="797"
+        height="60"
+        ry="10"
+        className="article-loader-bar-9"
+      ></rect>
+    </svg>
+  </div>
+);
+
+export default ArticleLoader;

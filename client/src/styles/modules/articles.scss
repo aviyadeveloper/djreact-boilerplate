@@ -54,3 +54,7 @@
 .articles__list__item__content__publication-date {
   @include text-data-stamp;
 }
+
+.articles__article__container {
+  flex-grow: 1;
+}

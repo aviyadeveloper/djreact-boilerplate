@@ -7,6 +7,7 @@ import {
   getArticleContent
 } from "../../../actions/ArticlesActions";
 import { Article } from "../../../types/Articles";
+import ArticleLoader from "../../animations/ArticleLoader";
 
 interface ArticleParams {
   id: string;
@@ -25,23 +26,23 @@ const ArticleDetail: React.FC<RouteComponentProps<ArticleParams>> = props => {
   }, []);
 
   useEffect(() => {
-    getArticleContent(article && article.content).then((res: string) => {
-      console.log(res);
-      setContent(res);
-    });
+    if (article && article.content) {
+      getArticleContent(article.content).then((res: string) => {
+        setContent(res);
+      });
+    }
   }, [article]);
 
   return (
     <div className="articles__article__container">
-      {article ? (
+      {article && content ? (
         <div className="articles__article">
-          <h2 className="articles__article__title">{article.title}</h2>
-          <div className="articles__article__content">
+          <div className="articles__article__content fadeIn">
             <ReactMarkdown source={content} />
           </div>
         </div>
       ) : (
-        <p>loading...</p>
+        <ArticleLoader />
       )}
     </div>
   );

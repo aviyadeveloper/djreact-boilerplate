@@ -19,6 +19,10 @@
 // Modules
 @import "./modules/articles.scss";
 
+// Animations
+@import "./animations/articleLoader";
+@import "./animations/fadeIn";
+
 // Base
 * {
   box-sizing: border-box;

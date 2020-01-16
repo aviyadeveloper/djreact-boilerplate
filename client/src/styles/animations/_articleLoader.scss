@@ -1,0 +1,50 @@
+.article-loader-container {
+  width: 30vw;
+  @media (max-width: $break-point) {
+    width: 100%;
+  }
+}
+
+[class^="article-loader-bar"] {
+  fill: $color-grey;
+  animation-name: expand;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  border-radius: 20px;
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0.1);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.article-loader-1 {
+  animation-delay: 100ms;
+}
+
+.article-loader-2 {
+  animation-delay: 200ms;
+}
+
+.article-loader-3 {
+  animation-delay: 50ms;
+}
+.article-loader-4 {
+  animation-delay: 150ms;
+}
+.article-loader-5 {
+  animation-delay: 120ms;
+}
+.article-loader-6 {
+  animation-delay: 20ms;
+}
+.article-loader-7 {
+  animation-delay: 80ms;
+}
+.article-loader-8 {
+  animation-delay: 0ms;
+}

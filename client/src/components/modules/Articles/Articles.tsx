@@ -5,7 +5,6 @@ import { Article } from "../../../types/Articles";
 
 const Articles: React.FC = () => {
   const [articles, setArticles] = useState<Article[]>([]);
-  console.log(articles);
 
   useEffect(() => {
     getArticlesList().then((data: Article[]) => {

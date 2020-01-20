@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import { RouteComponentProps } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 
-import {
-  getArticle,
-  getArticleContent
-} from "../../../actions/ArticlesActions";
+import { getArticle } from "../../../actions/ArticlesActions";
 import { Article } from "../../../types/Articles";
 import ArticleLoader from "../../animations/ArticleLoader";
+import CodeRenderer from "../../MDRenderers/CodeRenderer";
 
 interface ArticleParams {
   id: string;
@@ -15,7 +13,6 @@ interface ArticleParams {
 
 const ArticleDetail: React.FC<RouteComponentProps<ArticleParams>> = props => {
   const [article, setArticle] = useState<Article>();
-  const [content, setContent] = useState<string>();
 
   const id: string = props.match.params.id;
 
@@ -25,20 +22,16 @@ const ArticleDetail: React.FC<RouteComponentProps<ArticleParams>> = props => {
     });
   }, []);
 
-  useEffect(() => {
-    if (article && article.content) {
-      getArticleContent(article.content).then((res: string) => {
-        setContent(res);
-      });
-    }
-  }, [article]);
-
   return (
     <div className="articles__article__container">
-      {article && content ? (
+      {article && article.content ? (
         <div className="articles__article">
           <div className="articles__article__content fadeIn">
-            <ReactMarkdown source={content} />
+            <ReactMarkdown
+              source={article.content}
+              renderers={{ code: CodeRenderer }}
+              escapeHtml={false}
+            />
           </div>
         </div>
       ) : (

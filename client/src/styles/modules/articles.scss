@@ -4,6 +4,9 @@
   flex-grow: 1;
 }
 
+.articles__list__item_wrapper {
+  text-decoration: none;
+}
 .articles__list__item {
   display: flex;
   background-color: $color-white;

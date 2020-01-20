@@ -4,7 +4,10 @@ import path from "path";
 import { Article } from "../../../types/Articles";
 
 const ArticleListItem: React.FC<Article> = props => (
-  <Link to={path.join(window.location.pathname, `${props.id}`)}>
+  <Link
+    className="articles__list__item_wrapper"
+    to={path.join(window.location.pathname, `${props.id}`)}
+  >
     <div className="articles__list__item">
       <img
         className="articles__list__item__image"

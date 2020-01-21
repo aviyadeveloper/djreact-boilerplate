@@ -1,9 +1,5 @@
-export interface Article {
-  id: string;
-  title: string;
-  description: string;
+import { BaseItem } from "./BaseItem";
+
+export interface Article extends BaseItem {
   content?: string;
-  uploadedDate: Date;
-  publicationDate: any;
-  image: string;
 }

@@ -12,7 +12,7 @@ def hashImageFilename(instance, name):
 
 class Lecture(models.Model):
     title = models.CharField(max_length=200, default="")
-    link = models.CharField(max_length=200)
+    videoID = models.CharField(max_length=50, default="")
     description = models.TextField(("description"), default='')
     uploadDate = models.DateTimeField(("uploadDate"), auto_now=True)
     lastModified = models.DateTimeField(("uploadDate"), auto_now=True)

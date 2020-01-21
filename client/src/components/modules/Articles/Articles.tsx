@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ArticlesList from "./ArticlesList";
+import List from "../../Layout/List";
 import { getArticlesList } from "../../../actions/ArticlesActions";
 import { Article } from "../../../types/Articles";
 
@@ -13,9 +13,9 @@ const Articles: React.FC = () => {
   }, []);
 
   return (
-    <div className="articles">
+    <div className="module-wrapper articles">
       <h2 className="module-title">Articles Module</h2>
-      <ArticlesList articles={articles} />
+      <List moduleName="articles" items={articles} />
     </div>
   );
 };

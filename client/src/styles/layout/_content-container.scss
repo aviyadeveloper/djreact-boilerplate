@@ -1,4 +1,14 @@
 .content-container {
   display: flex;
+  justify-content: center;
   padding: $mrg-1 $mrg-6;
+  @media (max-width: $break-point) {
+    padding: $mrg-1 $mrg-2;
+  }
+}
+
+.module-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }

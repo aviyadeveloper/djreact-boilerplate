@@ -10,6 +10,9 @@ const Navbar: React.FC = () => (
       <NavLink className="navbar__link" to="/articles">
         Articles
       </NavLink>
+      <NavLink className="navbar__link" to="/lectures">
+        Lectures
+      </NavLink>
     </div>
   </nav>
 );

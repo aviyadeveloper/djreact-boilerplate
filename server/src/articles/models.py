@@ -1,6 +1,8 @@
 from os.path import splitext
 from uuid import uuid4
 from django.db import models
+from markdownx.models import MarkdownxField
+
 
 # Create your models here.
 
@@ -17,7 +19,7 @@ def hashImageFilename(instance, name):
 
 class Article(models.Model):
     title = models.CharField(("title"), max_length=100)
-    content = models.FileField("content", upload_to=hashFilename)
+    content = MarkdownxField('content', default="")
     description = models.TextField(("description"), default='')
     uploadDate = models.DateTimeField(("uploadDate"), auto_now=True)
     lastModified = models.DateTimeField(("uploadDate"), auto_now=True)

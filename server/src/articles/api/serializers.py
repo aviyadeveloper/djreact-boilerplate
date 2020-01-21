@@ -4,10 +4,10 @@ from ..models import Article
 
 class ArticleSerializerFull(serializers.ModelSerializer):
 
-    content = serializers.SerializerMethodField()
+    # content = serializers.SerializerMethodField()
 
-    def get_content(self, article):
-        return article.content.file.read()
+    # def get_content(self, article):
+    #    return article.content.file.read()
 
     class Meta:
         model = Article
@@ -19,6 +19,7 @@ class ArticleSerializerShort(serializers.ModelSerializer):
         model = Article
         fields = ('id',
                   'title',
+                  'content',
                   'description',
                   'uploadDate',
                   'lastModified',

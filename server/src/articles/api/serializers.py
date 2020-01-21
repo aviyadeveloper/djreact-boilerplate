@@ -19,7 +19,6 @@ class ArticleSerializerShort(serializers.ModelSerializer):
         model = Article
         fields = ('id',
                   'title',
-                  'content',
                   'description',
                   'uploadDate',
                   'lastModified',

@@ -12,6 +12,7 @@ interface LectureParams {
 
 const LectureDetail: React.FC<RouteComponentProps<LectureParams>> = props => {
   const [lecture, setLecture] = useState<Lecture>();
+  const [youtubeLoaded, setYoutubeLoaded] = useState<Boolean>(false);
 
   const id: string = props.match.params.id;
 
@@ -27,22 +28,27 @@ const LectureDetail: React.FC<RouteComponentProps<LectureParams>> = props => {
   };
 
   return (
-    <div className="lectures__lecture__container fadeIn">
+    <div>
       {lecture ? (
-        <div>
-          <YouTube
-            className="lectures__lecture__video"
-            videoId={lecture.videoID}
-            opts={youTubeOpts}
-          ></YouTube>
-          <div className="lectures__lecture__info">
-            <h4 className="lectures__lecture__title">{lecture.title}</h4>
-            <p className="lectures__lecture__description">
-              {lecture.description}
-            </p>
-            <p className="lectures__lecture__publication-date">
-              {lecture.publicationDate}
-            </p>
+        <div className="lectures__lecture__container fadeIn">
+          <div className={youtubeLoaded ? "ready fadeIn" : "loading fadeIn"}>
+            <YouTube
+              className="lectures__lecture__video"
+              videoId={lecture.videoID}
+              opts={youTubeOpts}
+              onReady={() => {
+                setYoutubeLoaded(true);
+              }}
+            ></YouTube>
+            <div className="lectures__lecture__info">
+              <h4 className="lectures__lecture__title">{lecture.title}</h4>
+              <p className="lectures__lecture__description">
+                {lecture.description}
+              </p>
+              <p className="lectures__lecture__publication-date">
+                {lecture.publicationDate}
+              </p>
+            </div>
           </div>
         </div>
       ) : (

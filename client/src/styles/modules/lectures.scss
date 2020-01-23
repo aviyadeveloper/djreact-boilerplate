@@ -1,6 +1,5 @@
 .lectures__lecture__video {
   @media (max-aspect-ratio: 16 / 11) {
-    background-color: blue;
     width: 100vw;
     height: calc(100vw / (16 / 9));
   }
@@ -28,4 +27,12 @@
 }
 .lectures__lecture__publication-date {
   @include text-data-stamp;
+}
+
+.loading {
+  opacity: 0;
+}
+
+.ready {
+  opacity: 1;
 }

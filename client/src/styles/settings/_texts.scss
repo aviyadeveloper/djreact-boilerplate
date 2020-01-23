@@ -42,6 +42,47 @@ li > input[type="checkbox"] {
 code {
   font-size: $font-m;
 }
+
+@media (max-width: $break-point) {
+  h1 {
+    font-size: $font-xl;
+  }
+  h2 {
+    font-size: $font-l;
+  }
+  h3 {
+    font-size: $font-m;
+  }
+  h4 {
+    font-size: $font-s;
+  }
+  h5 {
+    font-size: $font-xs;
+  }
+  h6 {
+    font-size: $font-xs;
+  }
+  p,
+  li {
+    font-size: $font-m;
+    line-height: 1.5;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  // For MD generated checkboxes
+  li > input[type="checkbox"] {
+    transform: scale(2);
+    margin: 0 0.5em;
+  }
+
+  code {
+    font-size: $font-s;
+  }
+}
+
 @mixin text-pri {
   color: $color-black;
   font-family: "roboto";

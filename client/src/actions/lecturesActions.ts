@@ -1,5 +1,5 @@
 import axios from "axios";
-import apiPath from "./apiPath";
+import { apiPath } from "./serverPaths";
 
 const getLecturesList = () =>
   axios

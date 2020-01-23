@@ -1,5 +1,6 @@
 import axios from "axios";
-import apiPath from "./apiPath";
+import { apiPath } from "./serverPaths";
+import markdownImageInjector from "./utils/markdownImageInjector";
 
 const getArticlesList = () =>
   axios
@@ -10,7 +11,11 @@ const getArticlesList = () =>
 const getArticle = (id: string) =>
   axios
     .get(`${apiPath}/articles/${id}`)
-    .then(res => res.data)
+    .then(res => {
+      let data = res.data;
+      data.content = markdownImageInjector(data.content);
+      return data;
+    })
     .catch(error => error);
 
 const getArticleContent = (link?: string) => {

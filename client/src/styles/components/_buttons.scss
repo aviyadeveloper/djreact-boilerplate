@@ -1,0 +1,29 @@
+.button {
+  border: none;
+  background-color: $color-sec-light;
+  transition-duration: 200ms;
+  outline: none;
+  @include text-pri;
+  font-size: 20px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: $color-sec-dark;
+  transition-duration: 200ms;
+}
+
+.button:active {
+  background-color: $color-sec-light !important;
+  transform: translate(2, 2);
+}
+
+.back-to-top {
+  height: 4em;
+  width: 4em;
+  box-shadow: 2px 2px 4px -2px black;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border-radius: 100%;
+}

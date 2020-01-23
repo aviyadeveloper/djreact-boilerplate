@@ -29,11 +29,22 @@ const LectureDetail: React.FC<RouteComponentProps<LectureParams>> = props => {
   return (
     <div className="lectures__lecture__container fadeIn">
       {lecture ? (
-        <YouTube
-          className="lectures_lecture_video"
-          videoId={lecture.videoID}
-          opts={youTubeOpts}
-        ></YouTube>
+        <div>
+          <YouTube
+            className="lectures__lecture__video"
+            videoId={lecture.videoID}
+            opts={youTubeOpts}
+          ></YouTube>
+          <div className="lectures__lecture__info">
+            <h4 className="lectures__lecture__title">{lecture.title}</h4>
+            <p className="lectures__lecture__description">
+              {lecture.description}
+            </p>
+            <p className="lectures__lecture__publication-date">
+              {lecture.publicationDate}
+            </p>
+          </div>
+        </div>
       ) : (
         <ArticleLoader />
       )}
